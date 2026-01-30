@@ -1,11 +1,9 @@
-{
-    "parameters": [
-        {
-            "name": "Name",
-            "value": "World",
-            "help": "The name to greet",
-            "type": "string",
-            "param": "name"
-        }
-    ]
-}
+[
+    {
+        "name": "Name",
+        "type": "string",
+        "param": "name",
+        "value": "",
+        "help": "Person to greet"
+    }
+]
