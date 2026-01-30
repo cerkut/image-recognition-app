@@ -1,0 +1,34 @@
+name: Push EI Transformation Block
+
+on:
+  push:
+    branches:
+      - master
+      - edit
+    paths:
+      - 'transformation-block/**'
+  workflow_dispatch:
+
+jobs:
+  push-transformation-block:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Edge Impulse CLI
+        run: npm install -g edge-impulse-cli
+
+      - name: Push Custom Transformation Block
+        working-directory: ./transformation-block/hello-edge
+        run: |
+          edge-impulse-blocks push . \
+            --api-key ${{ secrets.EI_API_KEY }}
+        env:
+          EDGE_IMPULSE_API_KEY: ${{ secrets.EI_API_KEY }}

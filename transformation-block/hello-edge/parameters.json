@@ -1,0 +1,11 @@
+{
+    "parameters": [
+        {
+            "name": "Name",
+            "value": "World",
+            "help": "The name to greet",
+            "type": "string",
+            "param": "name"
+        }
+    ]
+}
