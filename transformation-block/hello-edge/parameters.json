@@ -1,9 +1,0 @@
-[
-    {
-        "name": "Name",
-        "type": "string",
-        "param": "name",
-        "value": "",
-        "help": "Person to greet"
-    }
-]
